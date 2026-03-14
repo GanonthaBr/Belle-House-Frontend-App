@@ -5,12 +5,25 @@
 
 // ============ API CONFIGURATION ============
 
+function getApiBaseUrl() {
+  // In production behind the reverse proxy, use same-origin to avoid CORS.
+  const host = window.location.hostname;
+  if (
+    host === 'bellehouseniger.com' ||
+    host === 'www.bellehouseniger.com' ||
+    host === '51.91.159.155'
+  ) {
+    return '/api';
+  }
+
+  // Fallback for local development / preview environments.
+  return 'https://api2.bellehouseniger.com/api';
+}
+
 const API_CONFIG = {
-  BASE_URL: 'https://api2.bellehouseniger.com/api',
+  BASE_URL: getApiBaseUrl(),
   TIMEOUT: 30000, // 30 seconds
-  HEADERS: {
-    'Content-Type': 'application/json',
-  },
+  HEADERS: {},
 };
 
 // ============ ERROR HANDLING ============
@@ -75,6 +88,19 @@ async function apiRequest(endpoint, options = {}) {
   // Build headers
   if (typeof defaultOptions.headers !== 'object') {
     defaultOptions.headers = { ...API_CONFIG.HEADERS };
+  }
+
+  // Only send JSON content-type when needed (POST/PUT/PATCH with body).
+  // Avoiding it for GET requests prevents unnecessary CORS preflight.
+  const method = (defaultOptions.method || 'GET').toUpperCase();
+  if (
+    defaultOptions.body &&
+    method !== 'GET' &&
+    method !== 'HEAD' &&
+    !defaultOptions.headers['Content-Type'] &&
+    !defaultOptions.headers['content-type']
+  ) {
+    defaultOptions.headers['Content-Type'] = 'application/json';
   }
 
   // Create abort controller for timeout
