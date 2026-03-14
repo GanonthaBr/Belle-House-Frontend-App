@@ -1,0 +1,112 @@
+{
+  "site": {
+    "title": "Belle House",
+    "description": ""
+  },
+  "header": {
+    "phone": "+227 92 00 54 54",
+    "email": "contact@bellehouseniger.com",
+    "ctaButton": "Build For Me",
+    "menu": {
+      "home": "Accueil",
+      "about": "À propos",
+      "services": "Services",
+      "project": "Projet",
+      "blog": "Blog",
+      "blogDetails": "Détails du Blog",
+      "element": "Element",
+      "pages": "Pages",
+      "projectDetails": "Détails du Projet",
+      "servicesDetails": "Détails des Services",
+      "contact": "Contact"
+    }
+  },
+  "hero": {
+    "slide1": {
+      "title": "Construction <span>Moderne!</span>",
+      "subtitle": "Laissez-vous séduire par l’élégance et le confort de nos réalisations ",
+      "buttonText": "Voir+"
+    },
+    "slide2": {
+      "title": "Constrution Moderne! <span></span>",
+      "subtitle": "The right candidate may exist, but talented people",
+      "buttonText": "Voir+"
+    }
+  },
+  "about": {
+    "sectionLabel": "A propos",
+    "title": "L’ART DE BATIR AUTREMENT",
+    "description": "Contactez nous pour discuter de votre projet et benifier de nos services. We might track your usage patterns to see what features of the website you commonly use, website traffic volume, frequency of visits, type and time of transactions, type of browser, browser language.",
+    "stats": {
+      "deliveryPackages": {
+        "value": "100+",
+        "label": "Projets Realisés"
+      },
+      "countriesCovered": {
+        "value": "5+",
+        "label": "Pays Couverts"
+      }
+    }
+  },
+  "services": {
+    "sectionLabel": "Ce que nous faisons pour vous",
+    "title": "Nos Services",
+    "items": [
+      {
+        "title": "Construction Consultants",
+        "description": "Consectetur adipiscing elit, sed do eiusmod tempor ididunt ut labore et dolore magna aliqua.",
+        "buttonText": "Voir+"
+      },
+      {
+        "title": "Architectural Design",
+        "description": "Consectetur adipiscing elit, sed do eiusmod tempor ididunt ut labore et dolore magna aliqua.",
+        "buttonText": "Voir+"
+      },
+      {
+        "title": "Building Renovation",
+        "description": "Consectetur adipiscing elit, sed do eiusmod tempor ididunt ut labore et dolore magna aliqua.",
+        "buttonText": "Voir+"
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "title": "Quality",
+        "description": "Consectetur adipiscing elit, sed do eiusmod tempor ididunt ut labore"
+      },
+      {
+        "title": "Reliablity",
+        "description": "Consectetur adipiscing elit, sed do eiusmod tempor ididunt ut labore"
+      },
+      {
+        "title": "Experience",
+        "description": "Consectetur adipiscing elit, sed do eiusmod tempor ididunt ut labore"
+      },
+      {
+        "title": "Sustainability",
+        "description": "Consectetur adipiscing elit, sed do eiusmod tempor ididunt ut labore"
+      }
+    ]
+  },
+  "testimonials": {
+    "sectionLabel": "Témoignages",
+    "title": "Ce que disent nos clients"
+  },
+  "blog": {
+    "sectionLabel": "Notre Blog",
+    "title": "Dernières Nouvelles"
+  },
+  "footer": {
+    "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
+    "quickLinks": {
+      "title": "Liens Rapides",
+      "items": ["Accueil", "À propos", "Services", "Blog", "Contactez-nous"]
+    },
+    "support": {
+      "title": "Support",
+      "items": ["Privacy Policy", "Terms & Conditions", "Help"]
+    },
+    "copyright": "Copyright bellehouse©2026 Tous droits réservés"
+  }
+}

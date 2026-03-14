@@ -1,0 +1,23 @@
+# Deployment config files (not served)
+Dockerfile
+docker-compose.yml
+nginx.site.conf
+bellehouseniger-web.conf
+.dockerignore
+DEPLOYMENT.md
+
+# Dev/docs files
+API_HTML_INTEGRATION_GUIDE.js
+API_IMPLEMENTATION_PLAN.md
+WEBSITE_API_IMPLEMENTATION_GUIDE.md
+content.json
+
+# OS files
+.DS_Store
+Thumbs.db
+*.log
+
+# Git
+.git
+.gitignore
+.gitattributes

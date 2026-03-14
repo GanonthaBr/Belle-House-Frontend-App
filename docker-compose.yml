@@ -1,0 +1,21 @@
+services:
+  bellehouseniger-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: bellehouseniger-web:latest
+    container_name: bellehouseniger_web
+    restart: always
+    ports:
+      - "8081:80"          # host port 8081 → container port 80
+    networks:
+      - web_network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+networks:
+  web_network:
+    driver: bridge
