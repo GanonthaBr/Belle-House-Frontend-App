@@ -1,7 +1,6 @@
 # Deployment config files (not served)
 Dockerfile
 docker-compose.yml
-nginx.site.conf
 bellehouseniger-web.conf
 .dockerignore
 DEPLOYMENT.md
