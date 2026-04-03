@@ -1095,35 +1095,50 @@ li {
 
 /* line 657, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_common.scss */
 .preloader .preloader-circle {
-  display: none;
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  width: 18px;
+  height: 18px;
+  margin-left: -9px;
+  border-radius: 50%;
+  background: #FF3514;
+  box-shadow: 0 0 0 0 rgba(255, 53, 20, 0.22);
+  animation: bubbleRiseMid 1.3s infinite ease-in-out;
+}
+
+.preloader .preloader-circle::before,
+.preloader .preloader-circle::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #FF7A5E;
+}
+
+.preloader .preloader-circle::before {
+  left: -28px;
+  animation: bubbleRiseLeft 1.3s infinite ease-in-out;
+}
+
+.preloader .preloader-circle::after {
+  right: -28px;
+  animation: bubbleRiseRight 1.3s infinite ease-in-out;
 }
 
 /* line 679, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_common.scss */
 
 /* line 682, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_common.scss */
 .preloader .preloader-img {
-  position: absolute;
-  top: 50%;
-  z-index: 200;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  text-align: center;
-  display: inline-block;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  padding-top: 6px;
-  -webkit-transition: .6s;
-  -o-transition: .6s;
-  transition: .6s;
+  display: none;
 }
 
 /* line 700, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_common.scss */
 .preloader .preloader-img img {
-  max-width: 90px;
-  -webkit-animation: preloaderPulse 1400ms ease-in-out infinite;
-  animation: preloaderPulse 1400ms ease-in-out infinite;
+  display: none;
 }
 
 /* line 703, C:/Users/HP/Desktop/jun-2020/280.Industrial_HTML/assets/scss/_common.scss */
@@ -1183,6 +1198,54 @@ li {
     -webkit-transform: scale(0.92);
     transform: scale(0.92);
     opacity: 0.7;
+  }
+}
+
+@keyframes bubbleRiseMid {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.9;
+    box-shadow: 0 0 0 0 rgba(255, 53, 20, 0.22);
+  }
+  50% {
+    transform: translateY(-34px) scale(1.08);
+    opacity: 1;
+    box-shadow: 0 8px 20px 0 rgba(255, 53, 20, 0.25);
+  }
+  100% {
+    transform: translateY(-62px) scale(0.7);
+    opacity: 0;
+    box-shadow: 0 10px 24px 0 rgba(255, 53, 20, 0);
+  }
+}
+
+@keyframes bubbleRiseLeft {
+  0% {
+    transform: translateY(0) scale(0.9);
+    opacity: 0.8;
+  }
+  40% {
+    transform: translateY(-24px) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-50px) scale(0.65);
+    opacity: 0;
+  }
+}
+
+@keyframes bubbleRiseRight {
+  0% {
+    transform: translateY(0) scale(0.9);
+    opacity: 0.8;
+  }
+  55% {
+    transform: translateY(-28px) scale(1.02);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-54px) scale(0.65);
+    opacity: 0;
   }
 }
 
